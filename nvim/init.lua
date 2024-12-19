@@ -3,8 +3,6 @@
 -- Do this stuff before loading plugins so that plugins have a consistent behavior.
 -- Set the leader key to spacebar.
 --
--- This is, hands down, one of Vim's superpowers that is possible
--- because of modal editing.
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 

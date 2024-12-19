@@ -56,9 +56,8 @@ vim.opt.timeoutlen = 300
 vim.opt.number = true
 
 -- Show relative numbers above and below the current number.
---
 -- This is useful for now the jump distantce when calculating larger motions.
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- Set the number of reserved lines at the top and bottom before scrolling starts.
 --

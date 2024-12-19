@@ -27,6 +27,11 @@ vim.keymap.set("n", "<leader>j", "<c-w>j")
 vim.keymap.set("n", "<leader>k", "<c-w>k")
 vim.keymap.set("n", "<leader>l", "<c-w>l")
 
+-- Navigate buffers
+vim.keymap.set("n", "<leader>n", ":bn<cr>")
+vim.keymap.set("n", "<leader>p", ":bp<cr>")
+vim.keymap.set("n", "<leader>x", ":bd<cr>")
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
@@ -35,9 +40,12 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking (copying) text",
-  group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
+
+-- Nvim-tree
+vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<cr>")
