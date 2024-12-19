@@ -16,3 +16,6 @@ require("jsoeterbroek/lazy_init")
 -- For some reason, Neovim is not recognizing the templ file extension.
 -- There is probably a better way to do this, but this is fine for now.
 vim.cmd([[autocmd BufNewFile,BufRead *.templ set ft=templ]])
+
+-- ruff
+require'lspconfig'.ruff.setup{}
