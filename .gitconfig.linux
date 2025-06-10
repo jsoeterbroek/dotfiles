@@ -1,0 +1,2 @@
+[core]
+  hooksPath = /home/joost/.git_hooks
